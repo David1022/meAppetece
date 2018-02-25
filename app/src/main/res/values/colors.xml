@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Splash screen -->
+    <color name="splash_background">#E3F2FD</color>
+    <color name="splash_text">#8C9EFF</color>
+
+    <!-- Login screen -->
+    <color name="blue">#0070FF</color>
+
+    <!-- Main screen -->
+    <color name="end_color">#a2b1f1</color>
+
+</resources>

@@ -9,5 +9,7 @@ public class QuestionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
+
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new PresentationFragment()).commit();
     }
 }

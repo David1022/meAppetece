@@ -2,16 +2,18 @@
 <resources>
 
     <!-- App -->
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#F06292</color>
+    <color name="colorPrimaryDark">#E91E63</color>
+    <color name="colorAccent">#FF6D00</color>
+
+    <color name="blue">#0070FF</color>
 
     <!-- Splash screen -->
     <color name="splash_background">#E3F2FD</color>
     <color name="splash_text">#8C9EFF</color>
 
-    <!-- Login screen -->
-    <color name="blue">#0070FF</color>
+    <!-- Presentation screen -->
+    <color name="black">#000000</color>
 
     <!-- Main screen -->
     <color name="end_color">#a2b1f1</color>

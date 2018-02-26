@@ -66,7 +66,7 @@ public class SplashActivity extends AppCompatActivity {
 //                if (LocApplication.fCurrentUser != null) {
 //                    intent.setClass(SplashScreen.this, MainActivity.class);
 //                } else {
-////                    intent.setClass(SplashScreen.this, LoginActivity.class);
+////                    intent.setClass(SplashScreen.this, LoginFragment.class);
 //                    intent.setClass(SplashScreen.this, AccesActivity.class);
 //                }
                 intent.setClass(SplashActivity.this, QuestionActivity.class);

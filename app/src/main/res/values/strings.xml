@@ -5,4 +5,20 @@
     <!-- Presentation screen -->
     <string name="presentation_text">Hola, vidita...si, así es el friki de tu novio. Para nuestro 3er aniversario te he hecho
     una app...espero que te guste</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Hotmail</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_invalid_email">Pon el de  hotmail!! (y ponlo bien)!!</string>
+    <string name="error_invalid_password">Pista: tiene 6 cifras</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">Pero introduce algo!!</string>
+    <string name="permission_rationale">"Los permisos son para poder autocompletar el email...creo jajaja"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

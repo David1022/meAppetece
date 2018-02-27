@@ -22,5 +22,10 @@
     <string name="permission_rationale">"Los permisos son para poder autocompletar el email...creo jajaja"</string>
 
     <!-- Welcome fragment -->
-    <string name="welcome_text"></string>
+    <string name="welcome_text_one_attempt">Oleeeeee!! A la primera!!</string>
+    <string name="welcome_text_two_attempts">Ha costado un pelín pero está muy bien</string>
+    <string name="welcome_text_three_attempts">Jolin carinyet! Te ha costado un poco...ya se te ha olvidado nuestro aniversario?</string>
+
+    <string name="question_two"><![CDATA[La segunda pregunta es bien sencilla:<br></br><br></br><b>Me quieres?</b>]]></string>
+    <string name="quesrtion_three"></string>
 </resources>

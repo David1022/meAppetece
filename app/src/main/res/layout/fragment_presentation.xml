@@ -23,7 +23,6 @@
     <TextView
         android:id="@+id/te_apetece_text"
         style="@style/presentation_text.bold"
-        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/large_margin"
@@ -36,6 +35,7 @@
 
     <Button
         android:id="@+id/lets_play_button"
+        style="@style/presentation_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/large_margin"

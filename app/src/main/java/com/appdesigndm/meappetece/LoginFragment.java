@@ -44,8 +44,10 @@ public class LoginFragment extends Fragment implements LoaderManager.LoaderCallb
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    public static final String EMAIL = "juani.yera@hotmail.com";
-    public static final String PASSWORD = "010315";
+    public static final String EMAIL = "a";
+    public static final String PASSWORD = "a";
+//    public static final String EMAIL = "juani.yera@hotmail.com";
+//    public static final String PASSWORD = "010315";
     public static final String NUM_LOGIN_ATTEMPTS = "numLoginAttempts";
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -329,7 +331,7 @@ public class LoginFragment extends Fragment implements LoaderManager.LoaderCallb
 
             if (success) {
                 ((QuestionActivity) getActivity()).setNumLoginAttempts(numLoginAttempts);
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new WelcomeFragment()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new QuestionFragment()).commit();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();

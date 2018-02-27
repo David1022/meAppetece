@@ -19,7 +19,7 @@
 
     <!-- Login screen -->
     <dimen name="background_image_size">250dp</dimen>
-    <dimen name="dim_text_register">15sp</dimen>
+    <dimen name="dim_text_register">20sp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

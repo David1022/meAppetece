@@ -46,6 +46,7 @@ public class LoginFragment extends Fragment implements LoaderManager.LoaderCallb
 
     public static final String EMAIL = "juani.yera@hotmail.com";
     public static final String PASSWORD = "010315";
+    public static final String NUM_LOGIN_ATTEMPTS = "numLoginAttempts";
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -56,12 +57,16 @@ public class LoginFragment extends Fragment implements LoaderManager.LoaderCallb
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private int numLoginAttempts;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_login, container, false);
+        if (savedInstanceState == null) {
+            numLoginAttempts = 0;
+        }
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) view.findViewById(R.id.email);
@@ -79,7 +84,7 @@ public class LoginFragment extends Fragment implements LoaderManager.LoaderCallb
             }
         });
 
-        Button mEmailSignInButton = (Button) view.findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) view.findViewById(R.id.lets_play_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,13 +141,13 @@ public class LoginFragment extends Fragment implements LoaderManager.LoaderCallb
         }
     }
 
-
     /**
      * Attempts to sign in or register the account specified by the login form.
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
     private void attemptLogin() {
+        numLoginAttempts ++;
         if (mAuthTask != null) {
             return;
         }
@@ -323,6 +328,7 @@ public class LoginFragment extends Fragment implements LoaderManager.LoaderCallb
             showProgress(false);
 
             if (success) {
+                ((QuestionActivity) getActivity()).setNumLoginAttempts(numLoginAttempts);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new WelcomeFragment()).commit();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

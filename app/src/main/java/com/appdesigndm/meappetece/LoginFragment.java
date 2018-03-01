@@ -30,10 +30,8 @@ public class LoginFragment extends Fragment {
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    //    public static final String EMAIL = "a";
-    public static final String PASSWORD = "1";
-    //    public static final String EMAIL = "juani.yera@hotmail.com";
-//    public static final String PASSWORD = "010315";
+//    public static final String PASSWORD = "1";
+    public static final String PASSWORD = "010315";
     public static final String NUM_LOGIN_ATTEMPTS = "numLoginAttempts";
     /**
      * Keep track of the login task to ensure we can cancel it if requested.

@@ -49,7 +49,7 @@ public class BarcaMadridFragment extends Fragment {
 
     private void showDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-        builder.setMessage("Bueno, no entraremos en polémica precisamente hoy...")
+        builder.setMessage("Que noooooo, que no entraremos en polémica precisamente hoy...")
                 .setPositiveButton("jajajaja", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

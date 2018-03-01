@@ -1,12 +1,13 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.appdesigndm.meappetece.QuestionFragment">
+    tools:context="com.appdesigndm.meappetece.MarryMeFragment">
 
     <TextView
-        android:id="@+id/question_text"
+        android:id="@+id/text_marry_me"
         style="@style/presentation_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,36 +17,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/question_two" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        tools:text="@string/do_you_marry_me"/>
 
         <Button
             android:id="@+id/yes_button"
             style="@style/buttons"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="@dimen/large_margin"
-            android:text="@string/si"/>
+            android:text="@string/si"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/no_button"/>
 
         <Button
             android:id="@+id/no_button"
             style="@style/buttons"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
             android:layout_margin="@dimen/large_margin"
-            android:text="@string/no"/>
-
-    </LinearLayout>
+            android:layout_gravity="bottom|end"
+            android:text="@string/no"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
-
-

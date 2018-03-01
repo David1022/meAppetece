@@ -23,16 +23,22 @@
     <string name="login_text">Para empezar deberás introducir correctamente la contraseña:</string>
     <string name="text_date_picker">A ver si te acuerdas del día de nuestro primer beso:</string>
     <string name="text_first_dinner">¿Y te acuerdas de donde fue nuestra primera cena?</string>
+    <string name="text_barca_madrid">Este es para buscar polemica!</string>
     <string name="text_travels">Esta no tiene trampa, jajaja...\n¿Cual de nuestros viajes/escapadas te ha gustado más?</string>
+    <string name="text_next_scape">Y ahora, para la próxima escapada de 3/4 días...¿a dónde te gustaría ir?\n(A Roses no cuenta)</string>
+    <string name="text_next_travel">Y para el próximo viaje a dónde te gustaría ir?\n(A las Islas Griegas tampoco cuenta ;P)</string>
 
     <string name="welcome_text_one_attempt">Oleeeeee!! A la primera!!</string>
     <string name="welcome_text_two_attempts">Ha costado un pelín pero está muy bien</string>
     <string name="welcome_text_three_attempts">Jolin carinyet! Te ha costado un poco...ya se te ha olvidado nuestro aniversario?</string>
 
-    <string name="question_two"><![CDATA[La segunda pregunta es bien sencilla:<br></br><br></br><b>Me quieres?</b>]]></string>
-    <string name="question_three"><![CDATA[La tercera pregunta se complica un poco más:<br></br><br></br><b>Me quieres?</b>]]></string>
-    <string name="question_four"><![CDATA[Cuarta pregunta...de momento vas bien jajaja<br></br><br></br><b>Me quieres?</b>]]></string>
-    <string name="question_five"><![CDATA[Quinta y última pregunta:<br></br><br></br><b>Me quieres?</b>]]></string>
+    <string name="do_you_love_me"><![CDATA[Y ahora la pregunta mas importante:<br></br><br></br><b>¿Me quieres?</b>]]></string>
+    <string name="do_you_marry_me"><![CDATA[Y la última, para que quede constancia, y no me lo puedas negar nunca jajaja:<br></br><br></br>
+    <b> ¿Te quieres casar conmigo?</b>]]></string>
+    <string name="text_final"><![CDATA[Ya está vidita...sólo ha sido un pequeño juego tonto para poder decirte y hacer saber lo mucho que
+    te quiero<br></br>Los dos sabemos que no va a ser fácil pero si lo piensas bien ya hemos superado muchas cosas, otras las estamos
+    empezando a superar y superaremos juntos las que vendrán.
+    <br></br><br></br><b>TE QUIERO!!!!</b>]]></string>
 
     <!-- Botones -->
     <string name="te_apetece_text">Te apetece?</string>

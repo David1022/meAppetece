@@ -1,55 +1,51 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.appdesigndm.meappetece.BarcaMadridFragment">
+    tools:context="com.appdesigndm.meappetece.LoveMeFragment">
 
     <TextView
-        android:id="@+id/text_barca_madrid"
+        android:id="@+id/text_love_me"
         style="@style/presentation_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/large_margin"
-        android:text="@string/text_barca_madrid"
-        android:textAlignment="center"
-        android:visibility="visible"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/linear_barca_madrid"/>
+        tools:text="@string/do_you_love_me" />
 
     <LinearLayout
-        android:id="@+id/linear_barca_madrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/text_barca_madrid"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <Button
-            android:id="@+id/button_barca"
+            android:id="@+id/yes_button"
             style="@style/buttons"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="@dimen/large_margin"
-            android:padding="@dimen/large_margin"
-            android:text="Barça"
-            android:visibility="visible"/>
+            android:text="@string/si"/>
 
         <Button
-            android:id="@+id/button_madrid"
+            android:id="@+id/no_button"
             style="@style/buttons"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="@dimen/large_margin"
-            android:padding="@dimen/large_margin"
-            android:text="Madrid"
-            android:visibility="visible"/>
+            android:text="@string/no"/>
 
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
+
+

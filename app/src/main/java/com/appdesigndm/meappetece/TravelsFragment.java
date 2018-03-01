@@ -1,7 +1,6 @@
 package com.appdesigndm.meappetece;
 
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,7 +23,7 @@ public class TravelsFragment extends Fragment {
     private RadioGroup radioGroup;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_travels, container, false);
@@ -36,9 +35,41 @@ public class TravelsFragment extends Fragment {
         buttonTravels.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int checkedId = radioGroup.getCheckedRadioButtonId();
-                    Toast.makeText(mContext, "xxxxx", Toast.LENGTH_SHORT).show();
-//                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, new BarcaMadridFragment()).commit();
+                String selectedTravel = "";
+                switch (radioGroup.getCheckedRadioButtonId()) {
+                    case R.id.radio_button_menorca:
+                        selectedTravel = "Menorca";
+                        break;
+                    case R.id.radio_button_praga:
+                        selectedTravel = "Praga";
+                        break;
+                    case R.id.radio_button_roses:
+                        selectedTravel = "Roses";
+                        break;
+                    case R.id.radio_button_san_sebastian:
+                        selectedTravel = "San Sebastián";
+                        break;
+                    case R.id.radio_button_londres:
+                        selectedTravel = "Londres";
+                        break;
+                    case R.id.radio_button_brujas:
+                        selectedTravel = "Brujas";
+                        break;
+                    case R.id.radio_button_andorra:
+                        selectedTravel = "Andorra";
+                        break;
+                    case R.id.radio_button_boi_taull:
+                        selectedTravel = "Boí-Taüll";
+                        break;
+                    case R.id.radio_button_tenerife:
+                        selectedTravel = "Tenerife";
+                        break;
+                    default:
+                        Toast.makeText(mContext, "Selecciona un viaje", Toast.LENGTH_SHORT).show();
+                        return;
+                }
+                Toast.makeText(mContext, selectedTravel, Toast.LENGTH_SHORT).show();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new NextScapeFragment()).commit();
             }
         });
 

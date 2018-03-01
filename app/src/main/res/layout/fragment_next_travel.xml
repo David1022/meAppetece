@@ -1,0 +1,50 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.appdesigndm.meappetece.NextScapeFragment">
+
+        <TextView
+            android:id="@+id/text_next_travel"
+            style="@style/presentation_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/large_margin"
+            android:text="@string/text_next_travel"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/edit_text_next_travel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/edit_text_next_travel"
+            style="@style/presentation_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/large_margin"
+            android:background="@drawable/rounded_edit_text"
+            android:focusedByDefault="true"
+            android:hint="Introducir aquí"
+            android:singleLine="true"
+            app:layout_constraintBottom_toTopOf="@+id/button_next_travel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_next_travel"/>
+
+        <Button
+            android:id="@+id/button_next_travel"
+            style="@style/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/large_margin"
+            android:padding="@dimen/large_margin"
+            android:text="Guardar"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

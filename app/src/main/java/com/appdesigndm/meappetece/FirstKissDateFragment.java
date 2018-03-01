@@ -32,6 +32,7 @@ public class FirstKissDateFragment extends Fragment {
     private Button buttonDatePicker;
 
     private int numAttemptsLogin = 0;
+    private int numAttemptsFirstKissDate = 0;
     private String selectedDate;
 
     @Override
@@ -63,7 +64,6 @@ public class FirstKissDateFragment extends Fragment {
     }
 
     private void setupDatePicker() {
-        Calendar c = Calendar.getInstance();
         datePicker.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int day) {
@@ -71,11 +71,12 @@ public class FirstKissDateFragment extends Fragment {
                 String mMonth = (((Integer) (month + 1)).toString());
                 String mDay = ((Integer) day).toString();
                 selectedDate = mDay + "/" + mMonth + "/" + mYear;
-                if (selectedDate.equals(CATORCE)){
+                if (selectedDate.equals(CATORCE)) {
                     Toast.makeText(mContext, "Técnicamente fue el 15 pero se acepta", Toast.LENGTH_SHORT).show();
                 } else if (selectedDate.equals(QUINCE)) {
                     Toast.makeText(mContext, "Genial!", Toast.LENGTH_SHORT).show();
                 } else {
+                    numAttemptsFirstKissDate++;
                     showErrorDialog();
                 }
             }
@@ -118,6 +119,7 @@ public class FirstKissDateFragment extends Fragment {
     }
 
     private void openFirstDinnerFragment() {
+        MeAppeteceApplication.numAttemptsFirstKissDate = numAttemptsFirstKissDate;
         getFragmentManager().beginTransaction().replace(R.id.fragment_container, new FirstDinnerFragment()).commit();
     }
 

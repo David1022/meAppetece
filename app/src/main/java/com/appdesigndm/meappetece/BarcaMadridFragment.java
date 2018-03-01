@@ -34,12 +34,14 @@ public class BarcaMadridFragment extends Fragment {
         buttonBarca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MeAppeteceApplication.barcaMadrid = "Barça";
                 showDialog();
             }
         });
         buttonMadrid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MeAppeteceApplication.barcaMadrid = "Madrid";
                 showDialog();
             }
         });

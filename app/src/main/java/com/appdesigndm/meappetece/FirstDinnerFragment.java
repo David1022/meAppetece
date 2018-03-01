@@ -23,6 +23,8 @@ public class FirstDinnerFragment extends Fragment {
     private Button buttonFirstDinner;
     private RadioGroup radioGroup;
 
+    private int numFailedFirstDinner = 0;
+
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,8 +41,10 @@ public class FirstDinnerFragment extends Fragment {
                 int checkedId = radioGroup.getCheckedRadioButtonId();
                 if (checkedId == R.id.radio_button_viena) {
                     Toast.makeText(context, "Genial!", Toast.LENGTH_SHORT).show();
+                    MeAppeteceApplication.numFailedFirstDinner = numFailedFirstDinner;
                     getFragmentManager().beginTransaction().replace(R.id.fragment_container, new BarcaMadridFragment()).commit();
                 } else {
+                    numFailedFirstDinner++;
                     showErrorDialog();
                 }
             }

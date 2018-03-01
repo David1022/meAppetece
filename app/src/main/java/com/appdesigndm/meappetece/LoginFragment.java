@@ -30,8 +30,8 @@ public class LoginFragment extends Fragment {
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-//    public static final String PASSWORD = "1";
-    public static final String PASSWORD = "010315";
+    public static final String PASSWORD = "1";
+//    public static final String PASSWORD = "010315";
     public static final String NUM_LOGIN_ATTEMPTS = "numLoginAttempts";
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -87,7 +87,7 @@ public class LoginFragment extends Fragment {
      * errors are presented and no actual login attempt is made.
      */
     private void attemptLogin() {
-        numLoginAttempts++;
+        numLoginAttempts ++;
         if (mAuthTask != null) {
             return;
         }
@@ -195,8 +195,10 @@ public class LoginFragment extends Fragment {
 
             if (success) {
                 ((QuestionActivity) getActivity()).setNumLoginAttempts(numLoginAttempts);
+                MeAppeteceApplication.numFailedLogin = numLoginAttempts - 1;
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new FirstKissDateFragment()).commit();
             } else {
+                numLoginAttempts ++;
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
             }

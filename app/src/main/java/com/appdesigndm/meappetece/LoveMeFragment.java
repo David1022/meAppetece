@@ -25,6 +25,8 @@ public class LoveMeFragment extends Fragment implements View.OnClickListener {
     private Button yesButton;
     private Button noButton;
 
+    private int numFailedLoveMe = 0;
+
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {

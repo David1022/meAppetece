@@ -36,6 +36,7 @@ public class NextTravelFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 textNextTravel = editNextTravel.getText().toString();
+                MeAppeteceApplication.nextTravel = textNextTravel;
                 Toast.makeText(mContext, textNextTravel, Toast.LENGTH_SHORT).show();
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new LoveMeFragment()).commit();
             }

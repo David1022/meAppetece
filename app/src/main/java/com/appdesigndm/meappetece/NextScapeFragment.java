@@ -38,6 +38,7 @@ public class NextScapeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 textNextScape = editNextScape.getText().toString();
+                MeAppeteceApplication.nextScape = textNextScape;
                 Toast.makeText(mContext, textNextScape, Toast.LENGTH_SHORT).show();
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new NextTravelFragment()).commit();
             }

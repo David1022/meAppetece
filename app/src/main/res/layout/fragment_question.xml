@@ -28,23 +28,21 @@
 
         <Button
             android:id="@+id/yes_button"
-            style="@style/presentation_text"
+            style="@style/buttons"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="@dimen/large_margin"
-            android:background="@color/colorPrimary"
-            android:text="Si"/>
+            android:text="@string/si"/>
 
         <Button
             android:id="@+id/no_button"
-            style="@style/presentation_text"
+            style="@style/buttons"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="@dimen/large_margin"
-            android:background="@color/colorPrimary"
-            android:text="No"/>
+            android:text="@string/no"/>
 
     </LinearLayout>
 

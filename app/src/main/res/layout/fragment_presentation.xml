@@ -14,32 +14,18 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/large_margin"
         android:gravity="center"
-        android:text="@string/presentation_text"
-        app:layout_constraintBottom_toTopOf="@id/te_apetece_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/te_apetece_text"
-        style="@style/presentation_text.bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/large_margin"
-        android:gravity="center"
-        android:text="@string/te_apetece_text"
-        app:layout_constraintTop_toBottomOf="@+id/presentation_text"
         app:layout_constraintBottom_toTopOf="@id/lets_play_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Presentacion"/>
 
     <Button
         android:id="@+id/lets_play_button"
-        style="@style/presentation_text"
+        style="@style/buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/large_margin"
-        android:background="@color/colorPrimary"
         android:padding="@dimen/large_margin"
         android:text="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"

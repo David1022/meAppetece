@@ -1,0 +1,94 @@
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/parent_first_dinner"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.appdesigndm.meappetece.FirstDinnerFragment">
+
+    <TextView
+        android:id="@+id/text_first_dinner"
+        style="@style/presentation_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large_margin"
+        android:text="@string/text_first_dinner"
+        android:textAlignment="textStart"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/radio_group_first_dinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/text_first_dinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_first_dinner">
+
+        <RadioButton
+            android:id="@+id/radio_button_KPrens"
+            style="@style/presentation_text"
+            android:text="K Prens"
+            android:textAlignment="viewStart"
+            android:layout_margin="@dimen/xlarge_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radio_button_viena"
+            style="@style/presentation_text"
+            android:text="Viena"
+            android:textAlignment="viewStart"
+            android:layout_margin="@dimen/xlarge_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radio_button_olivetti"
+            style="@style/presentation_text"
+            android:text="Olivetti"
+            android:textAlignment="viewStart"
+            android:layout_margin="@dimen/xlarge_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radio_button_per_picar"
+            style="@style/presentation_text"
+            android:text="Per Picar"
+            android:textAlignment="viewStart"
+            android:layout_margin="@dimen/xlarge_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radio_button_mc_donalds"
+            style="@style/presentation_text"
+            android:text="Mc Donald's"
+            android:textAlignment="viewStart"
+            android:layout_margin="@dimen/xlarge_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_first_dinner"
+        style="@style/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large_margin"
+        android:padding="@dimen/large_margin"
+        android:text="@string/comprobar"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

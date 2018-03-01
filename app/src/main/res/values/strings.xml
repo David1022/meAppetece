@@ -3,29 +3,41 @@
     <string name="app_name">me APPetece</string>
 
     <!-- Presentation screen -->
-    <string name="presentation_text">Hola, vidita...si, así es el friki de tu novio. Para nuestro 3er aniversario te he hecho
-    una app...espero que te guste\n\n
-    Si quieres saber cual será tu regalo primero debes contestar CORRECTAMENTE una série de preguntas</string>
-    <string name="te_apetece_text">Te apetece?</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
-    <string name="login_text">La primera prueba será hacer bien el login:</string>
-    <string name="prompt_email">Escribe tu hotmail</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Seguir jugando</string>
     <string name="action_sign_in_short">Entrar</string>
-    <string name="error_invalid_email">Pon el de  hotmail!! (y ponlo bien)!!</string>
     <string name="error_invalid_password">Pista: tiene 6 cifras</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">Pero introduce algo!!</string>
-    <string name="permission_rationale">"Los permisos son para poder autocompletar el email...creo jajaja"</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
 
-    <!-- Welcome fragment -->
+    <!-- Textos y preguntas -->
+    <string name="presentation_text"><![CDATA[<b>Hola, vidita!</b><br><br>
+    Si, así es el friki de tu novio. Para nuestro 3er aniversario he hecho una app (será que me aburría, jajaja)<br>
+    Sólo son unas cuantas preguntas pero espero que te guste<br><br>
+    <b>Te apetece?</b>]]></string>
+    <string name="login_text">Para empezar deberás introducir correctamente la contraseña:</string>
+    <string name="text_date_picker">A ver si te acuerdas del día de nuestro primer beso:</string>
+    <string name="text_first_dinner">¿Y te acuerdas de donde fue nuestra primera cena?</string>
+    <string name="text_travels">Esta no tiene trampa, jajaja...\n¿Cual de nuestros viajes/escapadas te ha gustado más?</string>
+
     <string name="welcome_text_one_attempt">Oleeeeee!! A la primera!!</string>
     <string name="welcome_text_two_attempts">Ha costado un pelín pero está muy bien</string>
     <string name="welcome_text_three_attempts">Jolin carinyet! Te ha costado un poco...ya se te ha olvidado nuestro aniversario?</string>
 
     <string name="question_two"><![CDATA[La segunda pregunta es bien sencilla:<br></br><br></br><b>Me quieres?</b>]]></string>
-    <string name="quesrtion_three"></string>
+    <string name="question_three"><![CDATA[La tercera pregunta se complica un poco más:<br></br><br></br><b>Me quieres?</b>]]></string>
+    <string name="question_four"><![CDATA[Cuarta pregunta...de momento vas bien jajaja<br></br><br></br><b>Me quieres?</b>]]></string>
+    <string name="question_five"><![CDATA[Quinta y última pregunta:<br></br><br></br><b>Me quieres?</b>]]></string>
+
+    <!-- Botones -->
+    <string name="te_apetece_text">Te apetece?</string>
+    <string name="comprobar">Comprobar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

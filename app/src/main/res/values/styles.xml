@@ -29,6 +29,9 @@
     </style>
 
     <!-- Presentation screen-->
+    <style name="buttons">
+        <item name="android:background">@drawable/rounded_border_button</item>
+    </style>
     <style name="presentation_text">
         <item name="android:textSize">@dimen/dim_text_register</item>
         <item name="android:gravity">center</item>

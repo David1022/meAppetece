@@ -117,6 +117,7 @@ public class FirstKissDateFragment extends Fragment {
 
     private void openFirstDinnerFragment() {
         MeAppeteceApplication.numAttemptsFirstKissDate = numAttemptsFirstKissDate;
+//        MeAppeteceApplication.response.setNumAttemptsFirstKissDate(numAttemptsFirstKissDate);
         getFragmentManager().beginTransaction().replace(R.id.fragment_container, new FirstDinnerFragment()).commit();
     }
 

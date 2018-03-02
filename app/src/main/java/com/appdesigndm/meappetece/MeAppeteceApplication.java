@@ -4,6 +4,8 @@ import android.app.Application;
 
 public class MeAppeteceApplication extends Application {
 
+    public static ResponseModel response = new ResponseModel();
+
     public static Integer numFailedLogin = 0;
     public static Integer numAttemptsFirstKissDate = 0;
     public static Integer numFailedFirstDinner = 0;
@@ -15,7 +17,7 @@ public class MeAppeteceApplication extends Application {
     public static Integer numFailedMarryMe = 0;
 
     public static String makeString() {
-        return "{Num. fallos login: " + numFailedLogin.toString() + ", \n" +
+        String respuesta =  "{Num. fallos login: " + numFailedLogin.toString() + ", \n" +
                 "Num. fallos primer beso: " + numAttemptsFirstKissDate.toString() + ", \n" +
                 "Num. fallos primera cena: " + numFailedFirstDinner.toString() + ", \n" +
                 "Barça o Madrid: " + barcaMadrid +  ", \n" +
@@ -24,5 +26,7 @@ public class MeAppeteceApplication extends Application {
                 "El próximo viaje: " + nextTravel +  ", \n" +
                 "Num. fallos 'me quieres': " + numFailedLoveMe.toString() + ", \n" +
                 "Num. fallos 'quieres casarte conmigo': " + numFailedMarryMe.toString() + "}";
+
+        return respuesta;
         }
 }

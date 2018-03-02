@@ -66,6 +66,7 @@ public class LoveMeFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 MeAppeteceApplication.numFailedLoveMe = numFaliedLoveMe;
+//                MeAppeteceApplication.response.setNumFailedLoveMe(numFaliedLoveMe);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MarryMeFragment()).commit();
             }
         };

@@ -35,6 +35,7 @@ public class BarcaMadridFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 MeAppeteceApplication.barcaMadrid = "Barça";
+//                MeAppeteceApplication.response.setBarcaMadrid("Barça");
                 showDialog();
             }
         });
@@ -42,6 +43,7 @@ public class BarcaMadridFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 MeAppeteceApplication.barcaMadrid = "Madrid";
+//                MeAppeteceApplication.response.setBarcaMadrid("Madrid");
                 showDialog();
             }
         });

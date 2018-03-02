@@ -77,6 +77,7 @@ public class MarryMeFragment extends Fragment {
 
     private void openFinalFragment() {
         MeAppeteceApplication.numFailedMarryMe = numFailedMarryMe;
+//        MeAppeteceApplication.response.setNumFailedMarryMe(numFailedMarryMe);
         getFragmentManager().beginTransaction().replace(R.id.fragment_container, new UnlockFragment()).commit();
     }
 

@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
  */
 public class FinalFragment extends Fragment {
 
+    public static final String RESPONSE = "Response";
     private TextView textFinal;
     private Button buttonFinal;
     private ProgressDialog pd;
@@ -36,8 +37,8 @@ public class FinalFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_final, container, false);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference();
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
 
         textFinal = (TextView) view.findViewById(R.id.text_final);
         buttonFinal = (Button) view.findViewById(R.id.button_final);
@@ -55,23 +56,11 @@ public class FinalFragment extends Fragment {
     }
 
     private void enviarDatos() {
-//        showProgressBar();
-//         TODO: Enviar datos
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    Thread.sleep(400);
-//
-//                } catch (InterruptedException ie) {
-//                    // DO nothing
-//                }
-//                hideProgressBar();
-//            }
-//        }).start();
-
         Toast.makeText(getContext(), "Enviando datos...", Toast.LENGTH_SHORT).show();
-        myRef.setValue("Respuestas", MeAppeteceApplication.makeString());
+        myRef.child(RESPONSE)
+                .setValue(MeAppeteceApplication.makeString());
+//                .setValue(MeAppeteceApplication.response);
+//        .setValue("Respuesta", MeAppeteceApplication.makeString());
     }
 
     private void showProgressBar() {

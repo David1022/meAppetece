@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/background"
-        android:layout_width="@dimen/background_image_size"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/background_image_size"
-        android:src="@drawable/corazones"
-        android:alpha="0.1"
+        android:src="@drawable/background_hearts"
+        android:alpha="0.5"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

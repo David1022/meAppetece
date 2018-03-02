@@ -70,6 +70,7 @@ public class TravelsFragment extends Fragment {
                 }
                 Toast.makeText(mContext, selectedTravel, Toast.LENGTH_SHORT).show();
                 MeAppeteceApplication.bestTravel = selectedTravel;
+//                MeAppeteceApplication.response.setBestTravel(selectedTravel);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new NextScapeFragment()).commit();
             }
         });

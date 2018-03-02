@@ -22,15 +22,11 @@ public class SplashActivity extends AppCompatActivity {
 
         init();
         animateOnCreateViews();
-//        LocApplication.fAuth = FirebaseAuth.getInstance();
-//        LocApplication.fDatabase = FirebaseDatabase.getInstance();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
-//        LocApplication.fCurrentUser = LocApplication.fAuth.getCurrentUser();
     }
 
     private void init() {
@@ -63,18 +59,12 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent();
-//                if (LocApplication.fCurrentUser != null) {
-//                    intent.setClass(SplashScreen.this, MainActivity.class);
-//                } else {
-////                    intent.setClass(SplashScreen.this, LoginFragment.class);
-//                    intent.setClass(SplashScreen.this, AccesActivity.class);
-//                }
-                intent.setClass(SplashActivity.this, QuestionActivity.class);
+                intent.setClass(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
 
             }
-        }, 100);
+        }, 300);
 
     }
 }

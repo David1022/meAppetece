@@ -13,6 +13,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,11 +26,18 @@ public class FinalFragment extends Fragment {
     private Button buttonFinal;
     private ProgressDialog pd;
 
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_final, container, false);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference();
 
         textFinal = (TextView) view.findViewById(R.id.text_final);
         buttonFinal = (Button) view.findViewById(R.id.button_final);
@@ -45,22 +55,23 @@ public class FinalFragment extends Fragment {
     }
 
     private void enviarDatos() {
-        showProgressBar();
-        // TODO: Enviar datos
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(200);
-
-                } catch (InterruptedException ie) {
-                    // DO nothing
-                }
-                hideProgressBar();
-            }
-        }).start();
+//        showProgressBar();
+//         TODO: Enviar datos
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    Thread.sleep(400);
+//
+//                } catch (InterruptedException ie) {
+//                    // DO nothing
+//                }
+//                hideProgressBar();
+//            }
+//        }).start();
 
         Toast.makeText(getContext(), "Enviando datos...", Toast.LENGTH_SHORT).show();
+        myRef.setValue("Respuestas", MeAppeteceApplication.makeString());
     }
 
     private void showProgressBar() {

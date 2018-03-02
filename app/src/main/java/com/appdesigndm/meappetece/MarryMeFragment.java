@@ -23,6 +23,7 @@ public class MarryMeFragment extends Fragment {
     private TextView textMarryMe;
     private Button yesButton;
     private Button noButton;
+    private int numFailedMarryMe = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,6 +67,7 @@ public class MarryMeFragment extends Fragment {
     }
 
     private void clickToNo() {
+        numFailedMarryMe++;
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setMessage("Eso es mala leche, eh jajaja")
                 .setPositiveButton("Venga en serio", null)
@@ -74,7 +76,8 @@ public class MarryMeFragment extends Fragment {
     }
 
     private void openFinalFragment() {
-        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new FinalFragment()).commit();
+        MeAppeteceApplication.numFailedMarryMe = numFailedMarryMe;
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new UnlockFragment()).commit();
     }
 
 }

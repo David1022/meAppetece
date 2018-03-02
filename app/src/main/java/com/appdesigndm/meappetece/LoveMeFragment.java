@@ -21,11 +21,10 @@ public class LoveMeFragment extends Fragment implements View.OnClickListener {
 
     private Context mContext;
     private TextView textLoveMe;
-    private int numNoClicks;
+    private int numFaliedLoveMe;
     private Button yesButton;
     private Button noButton;
 
-    private int numFailedLoveMe = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
@@ -42,7 +41,7 @@ public class LoveMeFragment extends Fragment implements View.OnClickListener {
         yesButton.setOnClickListener(this);
         noButton.setOnClickListener(this);
 
-        numNoClicks = 0;
+        numFaliedLoveMe = 0;
 
         return view;
     }
@@ -66,30 +65,30 @@ public class LoveMeFragment extends Fragment implements View.OnClickListener {
         DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                MeAppeteceApplication.numFailedLoveMe = numFaliedLoveMe;
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MarryMeFragment()).commit();
             }
         };
-        if (numNoClicks <= 1) {
+        if (numFaliedLoveMe <= 1) {
             builder.setMessage("Ostras!! Eso si que no me lo esperaba...que me dijeras que SI a la primera..." +
                     "Ahora no se cómo seguir");
             builder.setPositiveButton("Seguir", listener);
-        } else if ((numNoClicks > 1) && (numNoClicks < 3)) {
-            builder.setMessage("Bueno, no ha sido a la primera pero yo se que en realidad me quieres");
+        } else if ((numFaliedLoveMe > 1) && (numFaliedLoveMe < 3)) {
+            builder.setMessage("Bueno, no ha sido a la primera pero no pasa nada ...yo se que me quieres");
             builder.setPositiveButton("Ya", listener);
         } else {
-            builder.setMessage("Jolín carinyet!! Si empezamos asi...");
+            builder.setMessage("Jolín carinyet!! Si vamos asi...");
             builder.setPositiveButton("Vaaaleeee", listener);
         }
-        builder.setMessage("Miau");
-        builder.setPositiveButton("Miau", listener);
+        builder.setPositiveButton("Continua va", listener);
         builder.setCancelable(false);
         builder.show();
     }
 
     private void clickToNo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-        numNoClicks++;
-        switch (numNoClicks) {
+        numFaliedLoveMe++;
+        switch (numFaliedLoveMe) {
             case 1:
                 builder.setMessage("No esperaba menos ;P");
                 builder.setPositiveButton("Volver a intentar", null);

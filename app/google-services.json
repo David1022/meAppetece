@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1030393666621",
+    "firebase_url": "https://meappetece.firebaseio.com",
+    "project_id": "meappetece",
+    "storage_bucket": "meappetece.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030393666621:android:08842c524c1f8726",
+        "android_client_info": {
+          "package_name": "com.appdesigndm.meappetece"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030393666621-i56mjt7km3o8j6s3bkgkaniku6bsn316.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appdesigndm.meappetece",
+            "certificate_hash": "7f1d6943ef48097a3732ceb54370315a03b04481"
+          }
+        },
+        {
+          "client_id": "1030393666621-gf4e54fl9231mm2rfp3c0pgk9m3b6cg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh2k-T_lKKd2_uHJRwsb560CVo2kkgFXg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030393666621-gf4e54fl9231mm2rfp3c0pgk9m3b6cg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

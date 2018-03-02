@@ -15,9 +15,6 @@ import android.widget.CalendarView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Calendar;
-import java.util.Vector;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,7 +54,7 @@ public class FirstKissDateFragment extends Fragment {
             }
         });
 
-        numAttemptsLogin = ((QuestionActivity) getActivity()).getNumLoginAttempts();
+        numAttemptsLogin = ((MainActivity) getActivity()).getNumLoginAttempts();
 
         showDialogByLoginAttempts();
         return view;

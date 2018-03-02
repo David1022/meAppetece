@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/degradado"
     android:padding="@dimen/xlarge_margin"
-    tools:context="com.appdesigndm.meappetece.SplashActivity">
+    tools:context="com.appdesigndm.meappetece.UnlockFragment">
 
     <ImageView
-        android:id="@+id/imagen_splash"
+        android:id="@+id/imagen_unlock"
         android:layout_width="@dimen/imagen_splash"
         android:layout_height="@dimen/imagen_splash"
         app:layout_constraintBottom_toBottomOf="parent"

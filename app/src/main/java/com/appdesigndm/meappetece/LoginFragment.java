@@ -194,7 +194,7 @@ public class LoginFragment extends Fragment {
             showProgress(false);
 
             if (success) {
-                ((QuestionActivity) getActivity()).setNumLoginAttempts(numLoginAttempts);
+                ((MainActivity) getActivity()).setNumLoginAttempts(numLoginAttempts);
                 MeAppeteceApplication.numFailedLogin = numLoginAttempts - 1;
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new FirstKissDateFragment()).commit();
             } else {

@@ -37,8 +37,6 @@ public class NextTravelFragment extends Fragment {
             public void onClick(View view) {
                 textNextTravel = editNextTravel.getText().toString();
                 MeAppeteceApplication.nextTravel = textNextTravel;
-//                MeAppeteceApplication.response.setNextTravel(textNextTravel);
-                Toast.makeText(mContext, textNextTravel, Toast.LENGTH_SHORT).show();
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new LoveMeFragment()).commit();
             }
         });

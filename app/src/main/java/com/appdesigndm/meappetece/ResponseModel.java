@@ -5,15 +5,15 @@ import android.os.Parcelable;
 
 public class ResponseModel implements Parcelable {
 
-    public static Integer numFailedLogin = 0;
-    public static Integer numAttemptsFirstKissDate = 0;
-    public static Integer numFailedFirstDinner = 0;
-    public static String barcaMadrid = "";
-    public static String bestTravel = "";
-    public static String nextScape = "";
-    public static String nextTravel = "";
-    public static Integer numFailedLoveMe = 0;
-    public static Integer numFailedMarryMe = 0;
+    private Integer numFailedLogin = 0;
+    private Integer numAttemptsFirstKissDate = 0;
+    private Integer numFailedFirstDinner = 0;
+    private String barcaMadrid = "";
+    private String bestTravel = "";
+    private String nextScape = "";
+    private String nextTravel = "";
+    private Integer numFailedLoveMe = 0;
+    private Integer numFailedMarryMe = 0;
 
     public ResponseModel() {
     }
@@ -22,17 +22,9 @@ public class ResponseModel implements Parcelable {
         readFromParcel(in);
     }
 
-    public ResponseModel(
-            Integer numFailedLogin,
-            Integer numAttemptsFirstKissDate,
-            Integer numFailedFirstDinner,
-            String barcaMadrid,
-            String bestTravel,
-            String nextScape,
-            String nextTravel,
-            Integer numFailedLoveMe,
-            Integer numFailedMarryMe
-    ) {
+    public ResponseModel(Integer numFailedLogin, Integer numAttemptsFirstKissDate, Integer numFailedFirstDinner,
+            String barcaMadrid, String bestTravel, String nextScape, String nextTravel, Integer numFailedLoveMe,
+            Integer numFailedMarryMe) {
         this.numFailedLogin = numFailedLogin;
         this.numAttemptsFirstKissDate = numAttemptsFirstKissDate;
         this.numFailedFirstDinner = numFailedFirstDinner;
@@ -42,6 +34,19 @@ public class ResponseModel implements Parcelable {
         this.nextTravel = nextTravel;
         this.numFailedLoveMe = numFailedLoveMe;
         this.numFailedMarryMe = numFailedMarryMe;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(numFailedLogin);
+        parcel.writeInt(numAttemptsFirstKissDate);
+        parcel.writeInt(numFailedFirstDinner);
+        parcel.writeString(barcaMadrid);
+        parcel.writeString(bestTravel);
+        parcel.writeString(nextScape);
+        parcel.writeString(nextTravel);
+        parcel.writeInt(numFailedLoveMe);
+        parcel.writeInt(numFailedMarryMe);
     }
 
     public void readFromParcel(Parcel in) {
@@ -56,94 +61,100 @@ public class ResponseModel implements Parcelable {
         numFailedMarryMe = in.readInt();
     }
 
-    public static Integer getNumFailedLogin() {
-        return numFailedLogin;
-    }
-
-    public static void setNumFailedLogin(Integer numFailedLogin) {
-        ResponseModel.numFailedLogin = numFailedLogin;
-    }
-
-    public static Integer getNumAttemptsFirstKissDate() {
-        return numAttemptsFirstKissDate;
-    }
-
-    public static void setNumAttemptsFirstKissDate(Integer numAttemptsFirstKissDate) {
-        ResponseModel.numAttemptsFirstKissDate = numAttemptsFirstKissDate;
-    }
-
-    public static Integer getNumFailedFirstDinner() {
-        return numFailedFirstDinner;
-    }
-
-    public static void setNumFailedFirstDinner(Integer numFailedFirstDinner) {
-        ResponseModel.numFailedFirstDinner = numFailedFirstDinner;
-    }
-
-    public static String getBarcaMadrid() {
-        return barcaMadrid;
-    }
-
-    public static void setBarcaMadrid(String barcaMadrid) {
-        ResponseModel.barcaMadrid = barcaMadrid;
-    }
-
-    public static String getBestTravel() {
-        return bestTravel;
-    }
-
-    public static void setBestTravel(String bestTravel) {
-        ResponseModel.bestTravel = bestTravel;
-    }
-
-    public static String getNextScape() {
-        return nextScape;
-    }
-
-    public static void setNextScape(String nextScape) {
-        ResponseModel.nextScape = nextScape;
-    }
-
-    public static String getNextTravel() {
-        return nextTravel;
-    }
-
-    public static void setNextTravel(String nextTravel) {
-        ResponseModel.nextTravel = nextTravel;
-    }
-
-    public static Integer getNumFailedLoveMe() {
-        return numFailedLoveMe;
-    }
-
-    public static void setNumFailedLoveMe(Integer numFailedLoveMe) {
-        ResponseModel.numFailedLoveMe = numFailedLoveMe;
-    }
-
-    public static Integer getNumFailedMarryMe() {
-        return numFailedMarryMe;
-    }
-
-    public static void setNumFailedMarryMe(Integer numFailedMarryMe) {
-        ResponseModel.numFailedMarryMe = numFailedMarryMe;
-    }
-
     @Override
     public int describeContents() {
         return 0;
     }
 
+    public Integer getNumFailedLogin() {
+        return numFailedLogin;
+    }
+
+    public void setNumFailedLogin(Integer numFailedLogin) {
+        this.numFailedLogin = numFailedLogin;
+    }
+
+    public Integer getNumAttemptsFirstKissDate() {
+        return numAttemptsFirstKissDate;
+    }
+
+    public void setNumAttemptsFirstKissDate(Integer numAttemptsFirstKissDate) {
+        this.numAttemptsFirstKissDate = numAttemptsFirstKissDate;
+    }
+
+    public Integer getNumFailedFirstDinner() {
+        return numFailedFirstDinner;
+    }
+
+    public void setNumFailedFirstDinner(Integer numFailedFirstDinner) {
+        this.numFailedFirstDinner = numFailedFirstDinner;
+    }
+
+    public String getBarcaMadrid() {
+        return barcaMadrid;
+    }
+
+    public void setBarcaMadrid(String barcaMadrid) {
+        this.barcaMadrid = barcaMadrid;
+    }
+
+    public String getBestTravel() {
+        return bestTravel;
+    }
+
+    public void setBestTravel(String bestTravel) {
+        this.bestTravel = bestTravel;
+    }
+
+    public String getNextScape() {
+        return nextScape;
+    }
+
+    public void setNextScape(String nextScape) {
+        this.nextScape = nextScape;
+    }
+
+    public String getNextTravel() {
+        return nextTravel;
+    }
+
+    public void setNextTravel(String nextTravel) {
+        this.nextTravel = nextTravel;
+    }
+
+    public Integer getNumFailedLoveMe() {
+        return numFailedLoveMe;
+    }
+
+    public void setNumFailedLoveMe(Integer numFailedLoveMe) {
+        this.numFailedLoveMe = numFailedLoveMe;
+    }
+
+    public Integer getNumFailedMarryMe() {
+        return numFailedMarryMe;
+    }
+
+    public void setNumFailedMarryMe(Integer numFailedMarryMe) {
+        this.numFailedMarryMe = numFailedMarryMe;
+    }
+
+    public static Creator<ResponseModel> getCREATOR() {
+        return CREATOR;
+    }
+
     @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(numFailedLogin);
-        parcel.writeInt(numAttemptsFirstKissDate);
-        parcel.writeInt(numFailedFirstDinner);
-        parcel.writeString(barcaMadrid);
-        parcel.writeString(bestTravel);
-        parcel.writeString(nextScape);
-        parcel.writeString(nextTravel);
-        parcel.writeInt(numFailedLoveMe);
-        parcel.writeInt(numFailedMarryMe);
+    public String toString() {
+        return "ResponseModel{" +
+                "numFailedLogin=" + numFailedLogin +
+                ", numAttemptsFirstKissDate=" + numAttemptsFirstKissDate +
+                ", numFailedFirstDinner=" + numFailedFirstDinner +
+                ", barcaMadrid='" + barcaMadrid + '\'' +
+                ", bestTravel='" + bestTravel + '\'' +
+                ", nextScape='" + nextScape + '\'' +
+                ", nextTravel='" + nextTravel + '\'' +
+                ", numFailedLoveMe=" + numFailedLoveMe +
+                ", numFailedMarryMe=" + numFailedMarryMe +
+                '}';
     }
 
     public static final Creator<ResponseModel> CREATOR = new Creator<ResponseModel>() {

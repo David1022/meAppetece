@@ -57,10 +57,8 @@ public class FinalFragment extends Fragment {
 
     private void enviarDatos() {
         Toast.makeText(getContext(), "Enviando datos...", Toast.LENGTH_SHORT).show();
-        myRef.child(RESPONSE)
-                .setValue(MeAppeteceApplication.makeString());
-//                .setValue(MeAppeteceApplication.response);
-//        .setValue("Respuesta", MeAppeteceApplication.makeString());
+        ResponseModel responseModel = MeAppeteceApplication.createResponse();
+        myRef.child(RESPONSE).setValue(responseModel);
     }
 
     private void showProgressBar() {

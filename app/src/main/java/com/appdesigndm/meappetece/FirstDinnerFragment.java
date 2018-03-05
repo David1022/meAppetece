@@ -40,9 +40,7 @@ public class FirstDinnerFragment extends Fragment {
             public void onClick(View view) {
                 int checkedId = radioGroup.getCheckedRadioButtonId();
                 if (checkedId == R.id.radio_button_viena) {
-                    Toast.makeText(context, "Genial!", Toast.LENGTH_SHORT).show();
                     MeAppeteceApplication.numFailedFirstDinner = numFailedFirstDinner;
-//                    MeAppeteceApplication.response.setNumFailedFirstDinner(numFailedFirstDinner);
                     getFragmentManager().beginTransaction().replace(R.id.fragment_container, new BarcaMadridFragment()).commit();
                 } else {
                     numFailedFirstDinner++;

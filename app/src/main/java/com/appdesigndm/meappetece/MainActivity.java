@@ -15,7 +15,9 @@ public class MainActivity extends AppCompatActivity implements Comunicator{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new LoginFragment()).commit();
+        MeAppeteceApplication.response = new ResponseModel();
+
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new PresentationFragment()).commit();
     }
 
     @Override

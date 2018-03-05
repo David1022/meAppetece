@@ -5,4 +5,5 @@ public interface Comunicator {
     void setNumLoginAttempts(int numLoginAttempts);
 
     int getNumLoginAttempts();
+
 }

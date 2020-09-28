@@ -3,25 +3,30 @@ package com.appdesigndm.meappetece;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 public class SplashActivity extends AppCompatActivity {
 
     private Context mContext;
     private ImageView imageSplash;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         mContext = this;
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         init();
         animateOnCreateViews();
+        mFirebaseAnalytics.setCurrentScreen(this, "splash", null);
     }
 
     @Override
